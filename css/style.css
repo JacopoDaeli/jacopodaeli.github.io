@@ -1,0 +1,63 @@
+/* Body */
+body {
+	background: url('../images/bg.jpg') repeat fixed center top #FFF;
+	background-size: cover;
+	font-family: 'open_sanslight', 'open_sansregular', sans-serif;
+	font-size: 16px;
+}
+
+/* Generic rules for links */
+a { color: inherit; cursor: pointer; text-decoration: underline;}
+
+/* Generic rules for H1s */
+h1 { font-size: 1.5em; text-transform: uppercase;}
+
+/* Generic rule for sections */
+.section { margin-top: 2em; }
+
+/* Branding header */
+#branding    {}
+#avatar      { text-align: center; margin-top: 4em; }
+#title       { text-align: center; margin-top: 2em; }
+#social      { text-align: center; }
+#description { margin-top: 4em; }
+
+/* Languages section */
+#languages .level { color: #888888; font-size: 0.8em; }
+
+/* avatar fix */
+#avatar img {
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px #FFF, 0 0 0 7px #999;
+    margin: 10px;
+}
+
+/* Bottom graphics */
+#bottom { position: fixed; bottom: 0; z-index: -1; border-bottom: 3px solid #000; width: 100%; }
+#tree { height: 200px; width: 200px; display: block; }
+
+/* Bottom margin for readability */
+#bottom-margin { margin-bottom: 150px; }
+
+/* Main container needs to span the whole page */
+#page { width: 100%; }
+
+/* Formatting rules for text in items */
+.item { margin-top: 1.5em; }
+.item h1 { font-size: 1em; font-family: 'open_sansregular'; font-weight: bold; font-variant: small-caps; margin-bottom: 0.2em;}
+.item .timeframe { color: #888888; font-size: 0.9em; }
+.item .companyname { font-size: 1em; }
+.item .diplomatitle { font-size: 1em; }
+.item .description { font-size: 1em; }
+.item .tags { font-size: 0.95em; }
+
+/* Formatting rules for text in lists */
+.list-unstyled { margin-top: 20px }
+
+/* Formatting rules for text in sections but not in items */
+.section .more { font-style: italic; margin-top: 1em; font-size: 0.90em; }
+.section .more a { text-decoration: underline; }
+
+/* Footer text */
+.footer-text { color: #999; font-variant: small-caps; font-size: 0.75em; }
+.footer-text a { text-decoration: underline; }
