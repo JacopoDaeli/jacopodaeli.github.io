@@ -1,8 +1,32 @@
 meta(charset='utf-8')
-meta(name='viewport' content='initial-scale=1.0, maximum-scale=1.0')
-meta(name='description', content='Jacopo Daeli is a Computer Scientist, Software Engineer and Hacker passionate about web technologies with a vocation for writing beautiful and clean code.')
+meta(http-equiv='x-ua-compatible', content='ie=edge')
+link(rel='icon', type='image/ico', href='/favicon.ico')
+meta(name='viewport', content='initial-scale=1.0, maximum-scale=1.0')
 
-block title
-  title Jacopo Daeli - Computer Scientist, Software Engineer and Hacker
+title Jacopo Daeli - Computer Scientist, Software Engineer and Hacker
+
+meta(name='description', content='Jacopo Daeli is a Computer Scientist, Software Engineer and Hacker passionate about web technologies with a vocation for writing beautiful and clean code.')
+meta(name='author', content='Jacopo Daeli')
+
+meta(itemprop='name', content='Jacopo Daeli - Computer Scientist, Software Engineer and Hacker')
+meta(itemprop='description', content='Jacopo Daeli is a Computer Scientist, Software Engineer and Hacker passionate about web technologies with a vocation for writing beautiful and clean code.')
+meta(itemprop='image', content='https://${env.URL}/static/img/jacopo_wide.jpg')
+
+meta(property='og:type', content='website')
+meta(property='og:site_name', content='Jacopo Daeli')
+meta(property='og:title', content='Jacopo Daeli - Computer Scientist, Software Engineer and Hacker')
+meta(property='og:description', content='Jacopo Daeli is a Computer Scientist, Software Engineer and Hacker passionate about web technologies with a vocation for writing beautiful and clean code.')
+meta(property='og:image', content='https://${env.URL}/static/img/jacopo_wide.jpg')
+meta(property='og:url', content=env.WEBURL)
+
+meta(name='twitter:card', content='summary_large_image')
+meta(name='twitter:site', content='@JacopoDaeli')
+meta(name='twitter:creator', content='@JacopoDaeli')
+meta(name='twitter:title', content='Jacopo Daeli - Computer Scientist, Software Engineer and Hacker')
+meta(name='twitter:description', content='Jacopo Daeli is a Computer Scientist, Software Engineer and Hacker passionate about web technologies with a vocation for writing beautiful and clean code.')
+meta(name='twitter:image', content='https://${env.URL}/static/img/jacopo_wide.jpg')
+meta(name='twitter:url', content=env.WEBURL)
+
+link(rel='canonical', href=env.WEBURL)
 
 link(rel='stylesheet', href='dist/index.css')
