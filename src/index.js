@@ -1,9 +1,5 @@
-import {EventEmitter} from 'events'
+import fancy from './fancy'
 
-class App extends EventEmitter {
-  constructor () {
-    super()
-  }
+window.onload = () => {
+  fancy()
 }
-
-window.app = new App()
