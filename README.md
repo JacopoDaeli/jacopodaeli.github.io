@@ -1,8 +1,8 @@
 My personal website.
 
 Demo
-- https://jacopodaeli.com
-- https://jacopodaeli.github.io
+- http://jacopodaeli.com
+- http://jacopodaeli.github.io
 
 Original fork from [home](https://github.com/izolate/home) by [Izolate](https://github.com/izolate).
 
