@@ -1,0 +1,30 @@
+page = about
+
+.{page}
+  margin 0 auto
+  max-width 640px
+  text-align center
+  +above(960px)
+    transform scale(1.25)
+
+.{page}__profilePicture
+  width 100%
+  max-width 150px
+  border-radius 100%
+  border 5px solid color-light-grey
+
+.{page}__name
+  font-size 1.7em
+  color color-light-grey
+  margin-bottom 0.5em
+
+.{page}__list
+  margin-top .5em
+  margin-bottom 2em
+
+  li
+    display inline-block
+    margin-right 1em
+
+    &:last-child
+      margin-right 0
