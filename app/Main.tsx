@@ -2,7 +2,7 @@ import Image from '@/components/Image'
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
-import { experience, interests } from '@/data/resume'
+import { education, experience, interests } from '@/data/resume'
 import { formatDate } from 'pliny/utils/formatDate'
 import type { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
@@ -15,6 +15,7 @@ export default function Home({ posts }: { posts: CoreContent<Blog>[] }) {
       <Hero />
       <About />
       <Experience />
+      <Education />
       <Interests />
       <Writing posts={posts} />
       <Contact />
@@ -90,6 +91,24 @@ function Experience() {
           </li>
         ))}
       </ol>
+    </section>
+  )
+}
+
+function Education() {
+  return (
+    <section className="py-10">
+      <SectionHeading>Education</SectionHeading>
+      <ul className="space-y-4">
+        {education.map((degree) => (
+          <li key={degree.school} className="flex flex-wrap items-baseline gap-x-2">
+            <span className="font-semibold text-gray-900 dark:text-gray-100">{degree.school}</span>
+            <span className="text-gray-500 dark:text-gray-400">
+              {degree.degree}, {degree.field}
+            </span>
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }

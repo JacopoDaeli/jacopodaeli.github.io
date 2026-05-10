@@ -62,3 +62,22 @@ export const interests = [
   'Distributed Systems',
   'Cybersecurity',
 ] as const
+
+export interface Degree {
+  school: string
+  degree: string
+  field: string
+}
+
+export const education: Degree[] = [
+  {
+    school: 'Politecnico di Milano',
+    degree: 'M.Sc.',
+    field: 'Telecommunications Engineering',
+  },
+  {
+    school: 'Università degli Studi di Milano',
+    degree: 'B.Sc.',
+    field: 'Mathematics and Computer Science',
+  },
+]
