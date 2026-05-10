@@ -40,7 +40,7 @@ function Hero() {
           Jacopo Daeli
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          Distinguished Engineer @ Palo Alto Networks · New York, NY
+          Distinguished Engineer @ Palo Alto Networks · New York, United States
         </p>
         <p className="font-mono text-sm text-gray-500 dark:text-gray-400">
           Building AI-driven security platforms. 15+ years shipping enterprise software.
