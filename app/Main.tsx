@@ -74,19 +74,36 @@ function Experience() {
   return (
     <section className="py-10">
       <SectionHeading>Selected Experience</SectionHeading>
-      <ol className="space-y-8">
-        {experience.map((role) => (
-          <li key={`${role.company}-${role.period}`} className="grid gap-2 sm:grid-cols-4 sm:gap-6">
+      <ol className="space-y-10">
+        {experience.map((company) => (
+          <li key={company.name} className="grid gap-2 sm:grid-cols-4 sm:gap-6">
             <div className="font-mono text-sm text-gray-500 sm:text-right dark:text-gray-400">
-              {role.period}
+              {company.span}
             </div>
             <div className="sm:col-span-3">
-              <div className="flex flex-wrap items-baseline gap-x-2">
-                <span className="font-semibold text-gray-900 dark:text-gray-100">{role.title}</span>
-                <span className="text-gray-500 dark:text-gray-400">@ {role.company}</span>
-                <span className="text-sm text-gray-400 dark:text-gray-500">· {role.location}</span>
-              </div>
-              <p className="mt-1 text-gray-600 dark:text-gray-300">{role.impact}</p>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                {company.name}
+              </h3>
+              <ul className="mt-3 space-y-5">
+                {company.roles.map((role) => (
+                  <li key={role.title}>
+                    <div className="flex flex-wrap items-baseline gap-x-2">
+                      <span className="font-medium text-gray-800 dark:text-gray-200">
+                        {role.title}
+                      </span>
+                      {company.roles.length > 1 && (
+                        <span className="font-mono text-xs text-gray-500 dark:text-gray-400">
+                          · {role.period}
+                        </span>
+                      )}
+                      <span className="text-sm text-gray-400 dark:text-gray-500">
+                        · {role.location}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-gray-600 dark:text-gray-300">{role.impact}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </li>
         ))}
