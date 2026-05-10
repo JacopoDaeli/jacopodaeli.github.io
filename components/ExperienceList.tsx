@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { experience } from '@/data/resume'
 
-const INITIAL_COUNT = 2
+const INITIAL_COUNT = 3
 
 export default function ExperienceList() {
   const [showAll, setShowAll] = useState(false)
