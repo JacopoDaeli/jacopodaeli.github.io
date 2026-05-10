@@ -43,7 +43,7 @@ function Hero() {
           Distinguished Engineer @ Palo Alto Networks · New York, United States
         </p>
         <p className="font-mono text-sm text-gray-500 dark:text-gray-400">
-          Building AI-driven security platforms. 15+ years shipping enterprise software.
+          Building AI-driven security platforms. Betting on agentic systems.
         </p>
       </div>
     </section>
@@ -57,14 +57,13 @@ function About() {
       <div className="space-y-4 text-gray-700 dark:text-gray-300">
         <p>
           I'm a software engineering leader with an entrepreneurial mindset and 15+ years of
-          experience designing, developing, and delivering complex enterprise software. I work
-          across Go, Python, TypeScript, and C/C++ — and I'm equally comfortable in distributed
-          backend systems, frontend platforms, and the cloud infrastructure that ties them together.
+          experience designing, developing, and delivering complex enterprise software. I
+          specialize in machine learning, distributed systems, and cloud infrastructures.
         </p>
         <p>
-          Currently, I'm leading the architecture and implementation of a next-generation AI-driven
-          threat intelligence and incident response platform at Palo Alto Networks, mentoring a
-          distributed team of 10+ engineers along the way.
+          At Palo Alto Networks, I lead architecture for a next-generation AI-driven threat
+          intelligence and incident response platform, mentoring a distributed team of 10+
+          engineers.
         </p>
       </div>
     </section>
