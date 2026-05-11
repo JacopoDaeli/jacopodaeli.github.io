@@ -1,9 +1,20 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import ThemeSwitch from './ThemeSwitch'
 
+const homeAnchors = [
+  { href: '#about', title: 'About' },
+  { href: '#experience', title: 'Experience' },
+]
+
 const Header = () => {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+
   let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
@@ -21,6 +32,16 @@ const Header = () => {
         </div>
       </Link>
       <div className="flex items-center gap-4 leading-5 sm:gap-6">
+        {isHome &&
+          homeAnchors.map((link) => (
+            <Link
+              key={link.title}
+              href={link.href}
+              className="hover:text-primary-500 dark:hover:text-primary-400 hidden font-medium text-gray-900 md:block dark:text-gray-100"
+            >
+              {link.title}
+            </Link>
+          ))}
         {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (

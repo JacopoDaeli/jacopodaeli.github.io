@@ -15,7 +15,7 @@ const siteMetadata = {
   github: 'https://github.com/JacopoDaeli',
   linkedin: 'https://www.linkedin.com/in/jacopodaeli',
   locale: 'en-US',
-  stickyNav: false,
+  stickyNav: true,
 }
 
 module.exports = siteMetadata

@@ -1,7 +1,6 @@
 import Image from '@/components/Image'
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
 import ExperienceList from '@/components/ExperienceList'
 import { education, interests } from '@/data/resume'
 import { formatDate } from 'pliny/utils/formatDate'
@@ -19,7 +18,6 @@ export default function Home({ posts }: { posts: CoreContent<Blog>[] }) {
       <Education />
       <Interests />
       <Writing posts={posts} />
-      <Contact />
     </div>
   )
 }
@@ -52,13 +50,13 @@ function Hero() {
 
 function About() {
   return (
-    <section className="py-10">
+    <section id="about" className="scroll-mt-32 py-10">
       <SectionHeading>About</SectionHeading>
       <div className="space-y-4 text-gray-700 dark:text-gray-300">
         <p>
           I'm a software engineering leader with an entrepreneurial mindset and 15+ years of
-          experience designing, developing, and delivering complex enterprise software. I
-          specialize in machine learning, distributed systems, and cloud infrastructures.
+          experience designing, developing, and delivering complex enterprise software. I specialize
+          in machine learning, distributed systems, and cloud infrastructures.
         </p>
         <p>
           At Palo Alto Networks, I lead architecture for a next-generation AI-driven threat
@@ -72,7 +70,7 @@ function About() {
 
 function Experience() {
   return (
-    <section className="py-10">
+    <section id="experience" className="scroll-mt-32 py-10">
       <SectionHeading>Selected Experience</SectionHeading>
       <ExperienceList />
     </section>
@@ -81,7 +79,7 @@ function Experience() {
 
 function Education() {
   return (
-    <section className="py-10">
+    <section id="education" className="scroll-mt-32 py-10">
       <SectionHeading>Education</SectionHeading>
       <ul className="space-y-4">
         {education.map((degree) => (
@@ -99,7 +97,7 @@ function Education() {
 
 function Interests() {
   return (
-    <section className="py-10">
+    <section id="interests" className="scroll-mt-32 py-10">
       <SectionHeading>Interests</SectionHeading>
       <div className="flex flex-wrap gap-3">
         {interests.map((interest) => (
@@ -117,7 +115,7 @@ function Interests() {
 
 function Writing({ posts }: { posts: CoreContent<Blog>[] }) {
   return (
-    <section className="py-10">
+    <section id="writing" className="scroll-mt-32 py-10">
       <div className="flex items-baseline justify-between">
         <SectionHeading className="mb-0">Writing</SectionHeading>
         {posts.length > 0 && (
@@ -153,22 +151,6 @@ function Writing({ posts }: { posts: CoreContent<Blog>[] }) {
           ))}
         </ul>
       )}
-    </section>
-  )
-}
-
-function Contact() {
-  return (
-    <section className="py-10">
-      <SectionHeading>Contact</SectionHeading>
-      <p className="mb-4 text-gray-700 dark:text-gray-300">
-        Always happy to talk about engineering leadership, AI security, and distributed systems.
-      </p>
-      <div className="flex items-center gap-4">
-        <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
-        <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
-        <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-      </div>
     </section>
   )
 }
