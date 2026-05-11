@@ -15,9 +15,7 @@ export default function ExperienceList() {
       <ol className="space-y-10">
         {visible.map((company) => (
           <li key={company.name}>
-            <div className="font-mono text-sm text-gray-500 dark:text-gray-400">
-              {company.span}
-            </div>
+            <div className="font-mono text-sm text-gray-500 dark:text-gray-400">{company.span}</div>
             <h3 className="mt-1 text-lg font-semibold text-gray-900 dark:text-gray-100">
               {company.name}
             </h3>
