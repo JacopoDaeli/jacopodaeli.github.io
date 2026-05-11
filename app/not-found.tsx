@@ -10,9 +10,9 @@ export default function NotFound() {
       </div>
       <div className="max-w-md">
         <p className="mb-4 text-xl leading-normal font-bold md:text-2xl">
-          Sorry, we couldn't find this page.
+          Page not found.
         </p>
-        <p className="mb-8">But don't worry — there's plenty on the home page.</p>
+        <p className="mb-8">Either I broke a link, or this page never existed. Head home.</p>
         <Link
           href="/"
           className="border-primary-500 text-primary-500 hover:bg-primary-500 dark:hover:bg-primary-500 inline-block rounded-full border px-3 py-1 text-sm leading-5 font-medium transition-colors hover:text-white"
