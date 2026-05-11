@@ -9,9 +9,7 @@ export default function NotFound() {
         </h1>
       </div>
       <div className="max-w-md">
-        <p className="mb-4 text-xl leading-normal font-bold md:text-2xl">
-          Page not found.
-        </p>
+        <p className="mb-4 text-xl leading-normal font-bold md:text-2xl">Page not found.</p>
         <p className="mb-8">Either I broke a link, or this page never existed. Head home.</p>
         <Link
           href="/"
