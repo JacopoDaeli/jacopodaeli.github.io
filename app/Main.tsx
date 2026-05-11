@@ -51,12 +51,16 @@ function About() {
   return (
     <section id="about" className="scroll-mt-32 py-10">
       <SectionHeading>About</SectionHeading>
-      <div className="text-gray-700 dark:text-gray-300">
+      <div className="space-y-4 text-gray-700 dark:text-gray-300">
         <p>
           I have 15+ years of experience architecting enterprise-scale distributed systems and
           cloud infrastructure. At Palo Alto Networks, I lead architecture for AI-driven threat
-          intelligence and incident response while mentoring a team of 10+ engineers. I specialize
-          in applied ML systems, model architectures, and agent frameworks.
+          intelligence and incident response while mentoring a team of 10+ engineers.
+        </p>
+        <p>
+          My background is computer science and telecommunications engineering — optics and radio
+          in particular. My current technical focus is applied ML systems, model architectures, and
+          agent frameworks for cybersecurity.
         </p>
       </div>
     </section>
