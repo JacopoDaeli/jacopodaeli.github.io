@@ -1,8 +1,8 @@
 ---
-title: "The AI Platform That Wrote Its Own Benchmark Won"
-date: "2026-05-11"
-summary: "A new 68-metric benchmark tests whether AI app-building platforms can function as complete software agencies. The findings on frontend-backend decoupling and universal security failures are real — but two of three authors work for the highest-scoring platform, and the conflict deserves scrutiny."
-tags: ["paper-review", "vibe-coding", "ai-platforms", "benchmarks", "conflict-of-interest"]
+title: 'The AI Platform That Wrote Its Own Benchmark Won'
+date: '2026-05-11'
+summary: 'A new 68-metric benchmark tests whether AI app-building platforms can function as complete software agencies. The findings on frontend-backend decoupling and universal security failures are real — but two of three authors work for the highest-scoring platform, and the conflict deserves scrutiny.'
+tags: ['paper-review', 'vibe-coding', 'ai-platforms', 'benchmarks', 'conflict-of-interest']
 ---
 
 **TL;DR:** A new paper introduces SWE-WebDevBench, a 68-metric benchmark testing whether "vibe coding" platforms can actually function as complete software agencies. The findings are genuinely interesting — no platform exceeds 60% engineering quality, beautiful UIs mask broken backends, and security is universally terrible. But two of the three authors work for QwikBuild, which happens to score highest on most metrics. The benchmark is unusually transparent about this conflict, and the data is real. But the structural question of whether the test was designed to favor the test-maker deserves scrutiny.
@@ -35,7 +35,7 @@ The paper's strongest claim — that platforms produce polished frontends maskin
 
 v0-Max's VettAI (the fintech prompt) tells the story. The frontend scores 72% — the paper describes it as having a well-structured component hierarchy with risk visualizations, a multi-stage analysis pipeline UI, and role-based navigation. It looks production-ready.
 
-Then you look at the scores. Schema Design Score: 0%. There is no database. In the repo's evaluation files, the details are stark: no `prisma/` directory, no `supabase/`, no ORM. All data comes from a static mock file. The repo's evaluation markdown confirms that the "Run Analysis" button calls `await new Promise((resolve) => setTimeout(resolve, 3000))` and produces nothing. The next.js config has `ignoreBuildErrors: true`. Zod is installed but never imported. The project name in `package.json` is literally `"my-project"`.
+Then you look at the scores. Schema Design Score: 0%. There is no database. In the repo's evaluation files, the details are stark: no `prisma/` directory, no `supabase/`, no ORM. All data comes from a static mock file. The repo's evaluation markdown confirms that the "Run Analysis" button calls `await new Promise((resolve) => setTimeout(resolve, 3000))` and produces nothing. The Next.js config has `ignoreBuildErrors: true`. Zod is installed but never imported. The project name in `package.json` is literally `"my-project"`.
 
 A non-technical founder would look at this output and think they have a product. They would be wrong — and they'd have no way to know without reading the code, which is the whole point of vibe coding being that they don't.
 
@@ -53,7 +53,7 @@ Here's where the conflict of interest needs to be examined directly.
 
 Nilesh Trivedi, one of the paper's authors, is QwikBuild's co-founder and CTO according to the company's public profile. Vinayaka Jyothi, another author, also works there. That's two of three authors affiliated with a platform being evaluated.
 
-QwikBuild scores highest on most metrics. Engineering Score: 54.5% vs. second-place Replit at 47.8%. Canary Retention Rate: 97.7% vs. next-best Emergent at 57%. Feature Completeness: 84% vs. 65%. Business Intent Fidelity: 3.7/4 vs. 3.0/4. It doesn't lead everywhere — Replit has a higher Frontend Engineering Score (74.3 vs 68.0), v0-Max has a much higher SEO/Web Standards score (40.3 vs 9.3), and Replit leads on Core Integration (70.0 vs 67.3) — but the overall pattern is clear.
+QwikBuild scores highest on most metrics. Engineering Score: 54.5% vs. second-place Replit at 47.8%. Canary Retention Rate: 97.7% vs. next-best Emergent at 57%. Feature Completeness: 84% vs. 65%. Business Intent Fidelity: 3.7/4 vs. 3.0/4. It doesn't lead everywhere — Replit has a higher Frontend Engineering Score (74.3 vs. 68.0), v0-Max has a much higher SEO/Web Standards score (40.3 vs. 9.3), and Replit leads on Core Integration (70.0 vs. 67.3) — but the overall pattern is clear.
 
 The benchmark website — webdevbench.com — is hosted on `qwikbuild.site`.
 
