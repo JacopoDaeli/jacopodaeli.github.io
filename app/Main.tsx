@@ -55,7 +55,7 @@ function About() {
         <p>
           I have 15+ years of experience architecting enterprise-scale distributed systems and
           cloud infrastructure. At Palo Alto Networks, I lead architecture for AI-driven threat
-          intelligence and incident response while mentoring a team of 10+ engineers.
+          intelligence and incident response while directing a team of 10+ engineers.
         </p>
         <p>
           My background is computer science and telecommunications engineering — optics and radio
