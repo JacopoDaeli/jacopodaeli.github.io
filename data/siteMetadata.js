@@ -8,7 +8,7 @@ const siteMetadata = {
   language: 'en-US',
   theme: 'dark',
   siteUrl: 'https://jacopodaeli.com',
-  siteRepo: 'https://github.com/jacopodaeli/jacopodaeli.com',
+  siteRepo: 'https://github.com/JacopoDaeli/jacopodaeli.github.io',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/profile.jpg`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/profile.jpg`,
   email: 'hello@jacopodaeli.com',
