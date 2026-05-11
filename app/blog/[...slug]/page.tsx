@@ -19,17 +19,21 @@ const layouts = {
   PostBanner,
 }
 
+function getAuthorDetails(authors: string[] | undefined) {
+  const slugs = authors && authors.length > 0 ? authors : ['default']
+  return slugs.map((slug) => {
+    const author = allAuthors.find((a) => a.slug === slug)
+    return coreContent(author as Authors)
+  })
+}
+
 export async function generateMetadata(props: {
   params: Promise<{ slug: string[] }>
 }): Promise<Metadata | undefined> {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const post = allBlogs.find((p) => p.slug === slug)
-  const authorList = post?.authors || ['default']
-  const authorDetails = authorList.map((author) => {
-    const authorResults = allAuthors.find((p) => p.slug === author)
-    return coreContent(authorResults as Authors)
-  })
+  const authorDetails = getAuthorDetails(post?.authors)
   if (!post) {
     return
   }
@@ -88,11 +92,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
   const prev = sortedCoreContents[postIndex + 1]
   const next = sortedCoreContents[postIndex - 1]
   const post = allBlogs.find((p) => p.slug === slug) as Blog
-  const authorList = post?.authors || ['default']
-  const authorDetails = authorList.map((author) => {
-    const authorResults = allAuthors.find((p) => p.slug === author)
-    return coreContent(authorResults as Authors)
-  })
+  const authorDetails = getAuthorDetails(post?.authors)
   const mainContent = coreContent(post)
   const jsonLd = post.structuredData
   jsonLd['author'] = authorDetails.map((author) => {

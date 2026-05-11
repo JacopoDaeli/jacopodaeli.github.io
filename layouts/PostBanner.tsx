@@ -3,9 +3,10 @@ import Image from '@/components/Image'
 import Bleed from 'pliny/ui/Bleed'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
-import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
+import PostNav from '@/components/PostNav'
 import SectionContainer from '@/components/SectionContainer'
+import siteMetadata from '@/data/siteMetadata'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -14,10 +15,9 @@ interface LayoutProps {
   prev?: { path: string; title: string }
 }
 
-export default function PostMinimal({ content, next, prev, children }: LayoutProps) {
+export default function PostBanner({ content, next, prev, children }: LayoutProps) {
   const { title, images } = content
-  const displayImage =
-    images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
+  const displayImage = images && images.length > 0 ? images[0] : siteMetadata.socialBanner
 
   return (
     <SectionContainer>
@@ -37,30 +37,7 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
           </div>
           <div className="prose dark:prose-invert max-w-none py-4">{children}</div>
           <footer>
-            <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
-              {prev && prev.path && (
-                <div className="pt-4 xl:pt-8">
-                  <Link
-                    href={`/${prev.path}`}
-                    className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                    aria-label={`Previous post: ${prev.title}`}
-                  >
-                    &larr; {prev.title}
-                  </Link>
-                </div>
-              )}
-              {next && next.path && (
-                <div className="pt-4 xl:pt-8">
-                  <Link
-                    href={`/${next.path}`}
-                    className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                    aria-label={`Next post: ${next.title}`}
-                  >
-                    {next.title} &rarr;
-                  </Link>
-                </div>
-              )}
-            </div>
+            <PostNav prev={prev} next={next} />
           </footer>
         </div>
       </article>
