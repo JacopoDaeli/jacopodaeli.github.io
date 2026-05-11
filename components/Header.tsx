@@ -9,6 +9,7 @@ import ThemeSwitch from './ThemeSwitch'
 const homeAnchors = [
   { href: '#about', title: 'About' },
   { href: '#experience', title: 'Experience' },
+  { href: '#education', title: 'Education' },
 ]
 
 const Header = () => {
