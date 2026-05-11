@@ -11,7 +11,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/jacopodaeli/jacopodaeli.com',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/profile.jpg`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/profile.jpg`,
-  email: 'jacopo.daeli@gmail.com',
+  email: 'hello@jacopodaeli.com',
   github: 'https://github.com/JacopoDaeli',
   linkedin: 'https://www.linkedin.com/in/jacopodaeli',
   locale: 'en-US',
