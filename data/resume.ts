@@ -80,13 +80,6 @@ export const experience: Company[] = [
   },
 ]
 
-export const interests = [
-  'Artificial Intelligence',
-  'Machine Learning',
-  'Distributed Systems',
-  'Cybersecurity',
-] as const
-
 export interface Degree {
   school: string
   degree: string

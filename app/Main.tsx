@@ -2,7 +2,7 @@ import Image from '@/components/Image'
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
 import ExperienceList from '@/components/ExperienceList'
-import { education, interests } from '@/data/resume'
+import { education } from '@/data/resume'
 import { formatDate } from 'pliny/utils/formatDate'
 import type { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
@@ -16,7 +16,6 @@ export default function Home({ posts }: { posts: CoreContent<Blog>[] }) {
       <About />
       <Experience />
       <Education />
-      <Interests />
       <Writing posts={posts} />
     </div>
   )
@@ -63,6 +62,10 @@ function About() {
           intelligence and incident response platform, mentoring a distributed team of 10+
           engineers.
         </p>
+        <p>
+          I'm especially interested in model architectures, agent frameworks, and the engineering
+          practice of building applied ML systems.
+        </p>
       </div>
     </section>
   )
@@ -71,7 +74,7 @@ function About() {
 function Experience() {
   return (
     <section id="experience" className="scroll-mt-32 py-10">
-      <SectionHeading>Selected Experience</SectionHeading>
+      <SectionHeading>Experience</SectionHeading>
       <ExperienceList />
     </section>
   )
@@ -91,24 +94,6 @@ function Education() {
           </li>
         ))}
       </ul>
-    </section>
-  )
-}
-
-function Interests() {
-  return (
-    <section id="interests" className="scroll-mt-32 py-10">
-      <SectionHeading>Interests</SectionHeading>
-      <div className="flex flex-wrap gap-3">
-        {interests.map((interest) => (
-          <span
-            key={interest}
-            className="rounded-full border border-gray-200 px-4 py-1.5 font-mono text-sm text-gray-700 dark:border-gray-700 dark:text-gray-300"
-          >
-            {interest}
-          </span>
-        ))}
-      </div>
     </section>
   )
 }
