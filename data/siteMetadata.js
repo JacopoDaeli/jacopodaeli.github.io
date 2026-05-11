@@ -5,7 +5,7 @@ const siteMetadata = {
   headerTitle: 'Jacopo Daeli',
   description:
     'Distinguished Engineer at Palo Alto Networks. Writing about machine learning, distributed systems, and cybersecurity.',
-  language: 'en-us',
+  language: 'en-US',
   theme: 'dark',
   siteUrl: 'https://jacopodaeli.com',
   siteRepo: 'https://github.com/jacopodaeli/jacopodaeli.com',
