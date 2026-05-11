@@ -54,6 +54,12 @@ const Header = () => {
               {link.title}
             </Link>
           ))}
+        <Link
+          href="https://calendly.com/jacopodaeli/new-meeting"
+          className="border-primary-500 text-primary-500 hover:bg-primary-500 dark:hover:bg-primary-500 rounded-full border px-3 py-1 text-sm font-medium transition-colors hover:text-white"
+        >
+          Book a call
+        </Link>
         <ThemeSwitch />
       </div>
     </header>
