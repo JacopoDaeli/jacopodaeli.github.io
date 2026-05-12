@@ -53,14 +53,20 @@ function About() {
       <SectionHeading>About</SectionHeading>
       <div className="space-y-4 text-gray-700 dark:text-gray-300">
         <p>
-          I have 15+ years of experience architecting enterprise-scale distributed systems and cloud
-          infrastructure. At Palo Alto Networks, I lead architecture for AI-driven threat
-          intelligence and incident response while directing a team of 10+ engineers.
+          I have 15+ years of experience building enterprise-scale distributed systems, cloud
+          infrastructure, and complex software platforms. At Palo Alto Networks, I lead architecture
+          for AI-driven threat intelligence and incident response while directing a team of 10+
+          engineers.
         </p>
         <p>
-          My background is computer science and telecommunications engineering, optics and radio in
-          particular. My current technical focus is applied ML systems, model architectures, and
-          agent frameworks for cybersecurity.
+          My background spans computer science, telecommunications engineering, optics, and radio
+          systems. I currently focus on applied ML systems, agentic AI, cybersecurity automation,
+          and production-scale AI infrastructure, with broader interests in robotics and computer
+          vision.
+        </p>
+        <p>
+          I stay hands-on across system design, architecture, and implementation, primarily in Go,
+          Python, TypeScript/JavaScript, and C/C++.
         </p>
       </div>
     </section>
