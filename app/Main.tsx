@@ -58,7 +58,7 @@ function About() {
           intelligence and incident response while directing a team of 10+ engineers.
         </p>
         <p>
-          My background is computer science and telecommunications engineering — optics and radio in
+          My background is computer science and telecommunications engineering, optics and radio in
           particular. My current technical focus is applied ML systems, model architectures, and
           agent frameworks for cybersecurity.
         </p>

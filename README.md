@@ -8,7 +8,7 @@ Building AI-driven security platforms. Betting on agentic systems.
 
 15+ years of experience architecting enterprise-scale distributed systems and cloud infrastructure. At Palo Alto Networks, I lead architecture for AI-driven threat intelligence and incident response while directing a team of 10+ engineers.
 
-Background in computer science and telecommunications engineering — optics and radio in particular. Current technical focus: applied ML systems, model architectures, and agent frameworks for cybersecurity.
+Background in computer science and telecommunications engineering, optics and radio in particular. Current technical focus: applied ML systems, model architectures, and agent frameworks for cybersecurity.
 
 ## Experience
 
