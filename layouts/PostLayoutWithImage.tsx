@@ -15,9 +15,16 @@ interface LayoutProps {
   children: ReactNode
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { path, date, title } = content
+export default function PostLayoutWithImage({
+  content,
+  authorDetails,
+  next,
+  prev,
+  children,
+}: LayoutProps) {
+  const { path, date, title, images } = content
   const basePath = path.split('/')[0]
+  const heroImage = images && images.length > 0 ? images[0] : null
 
   return (
     <SectionContainer>
@@ -70,7 +77,12 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
-              <div className="prose dark:prose-invert max-w-none pt-4 pb-8 xl:pt-10">
+              <div className="prose dark:prose-invert max-w-none pt-2 pb-8">
+                {heroImage && (
+                  <div className="relative mb-16 aspect-2/1 w-full">
+                    <Image src={heroImage} alt={title} fill className="object-cover" />
+                  </div>
+                )}
                 {children}
               </div>
             </div>
