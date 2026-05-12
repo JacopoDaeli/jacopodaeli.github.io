@@ -59,9 +59,9 @@ function About() {
           engineers.
         </p>
         <p>
-          My background spans computer science, telecommunications engineering, optics, and radio
-          systems. I currently focus on applied ML systems, agentic AI, cybersecurity automation,
-          and production-scale AI infrastructure, with broader interests in robotics and computer
+          My background spans computer science, mathematics, and telecommunications engineering. I
+          currently focus on applied ML systems, agentic AI, cybersecurity automation, and
+          production-scale AI infrastructure, with broader interests in robotics and computer
           vision.
         </p>
         <p>
